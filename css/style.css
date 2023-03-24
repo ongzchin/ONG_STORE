@@ -1,0 +1,71 @@
+#title{
+  background-color:#FFCEFE;
+}
+.h1-title{
+  padding: 5% 15%;
+}
+.img-cat{
+  padding-top: 5% ;
+  padding-left:15%;
+  transform:rotate(25deg);
+}
+.navbar-brand{
+  margin-left: 5%;
+}
+.navbar-nav{
+  margin-right: 5%;
+}
+.feature{
+  text-align: center;
+  padding: 5% 10%;
+  font-family: 'Itim', cursive;
+}
+.icon{
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+.icon:hover{
+  color:#C8FFD4;
+}
+#features{
+  padding:5% 15%;
+}
+.testimonials{
+  background-color: #C8FFD4;
+  color:#fff;
+  /* font color change to white */
+}
+#press{
+  text-align: center;
+}
+.img-press{
+  width:15%;
+  margin-top:5%;
+  margin-bottom: 5%;
+  margin-right: 5%;
+}
+#testimonials{
+  text-align: center;
+}
+.testimonial-img{
+  border-radius:50%;
+  margin-top: 5%;
+  width:500px;
+  height:500px;
+}
+/* pricing section */
+.pricing{
+  text-align: center;
+  padding: 5% 15%;
+}
+.card{
+  margin: 3%;
+}
+
+.foot{
+  text-align: center;
+margin:20px;
+}
+#cta{
+  text-align: center;
+}

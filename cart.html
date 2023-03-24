@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Ong Ong</title>
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <!-- install bootstrap using CDN-->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+<!-- install bootstarp using bootstarp folder-->
+<link rel="icon" href="images\logo.png">
+<link rel="stylesheet" href="css\styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/5b6fdf8c49.js" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handlee&family=Lora&family=Merienda&family=Noto+Serif:ital@1&family=Paytone+One&display=swap" rel="stylesheet">
+
+
+</head>
+<body onload="cartpagedisplay()">
+
+  <!-- Nav Bar -->
+<div class="container_fluid">
+
+  <nav class="navbar navbar-expand-xl" style="background-color:white;">
+    <a class="navbar-brand "><img class="go" src="images\logo.png" alt="img-ong" ><a class="nav-link"href="index.html">ONG ONG</a></a>
+
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+      <li class="nav-item" ><a class="nav-link"href="login.html"><i class="fa-regular fa-registered"></i> Register</a></li>
+      <li class="nav-item" ><a class="nav-link"href="loginin.html"><i class="fa-solid fa-circle-info"></i> Log In</a></li>
+      <li class="nav-item" ><a class="nav-link"href="product.html"><i class="fa-solid fa-magnifying-glass"></i> Products</a></li>
+      <li class="nav-item"> <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping fa-2x"></i><span id="cartdisplay"><sup>0</sup></span></a></li>
+
+
+      </ul>
+  </div>
+ </nav>
+</div>
+
+
+<div class="a11">
+  <div class="container_fluid" >
+<section class="cart-list">
+  <div class="cart-title">
+    <hr>
+    <h3 class="h3-title">Item in cart</h3>
+    <hr>
+  </div>
+  <div class="row container_fluid cart-label h3-title">
+    <div class="col-lg-3">
+    <h4>Item</h4>
+    </div>
+    <div class="col-lg-3">
+      <h4>Item Tag</h4>
+      </div>
+      <div class="col-lg-3">
+        <h4>Price</h4>
+
+      </div>
+      <div class="col-lg-3">
+        <h4>Remove</h4>
+
+      </div>
+      </div>
+      <hr>
+
+      <div class="row container_fluid product-container" id="cart1" >
+
+      </div>
+
+      <div class="row container_fluid" >
+
+        <div class="col-lg-3" >
+
+        </div>
+        <div class="col-lg-3">
+
+        </div>
+
+
+      <div class="col-lg-3">
+        <p class="ltp">Total Price : RM <span id="totalprice"></span></p>
+
+      </div>
+
+
+      <div class="col-lg-3">
+        <a class="btn btn-primary" href="#" onclick="removeitem()" id="delbtn">Delete</a>
+
+      </div>
+      <!-- show item in cart -->
+      <div class="row container_fluid product-container" id:"cart1">
+
+        <div class="col-lg-3">
+
+        </div>
+        <div class="col-lg-3">
+
+        </div>
+        <div class="col-lg-3">
+
+        </div>
+        <div class="col-lg-3">
+
+          <div class="container-order">
+          <a class="btn btn-primary" onclick="openPopup()" id="plobtn">Place Order</a>
+          <!-- <button type="submit" class="btn-order" onclick="openPopup()">Place Order</button> -->
+          <div class="popup" id="popup">
+            <img src="images\tick.jpg" alt="">
+            <h2>Thank You!</h2>
+            <p>Your order details has been sucessfully submitted. Thanks! </p>
+            <!-- <button type="button" onclick="closePopup()">OK</button> -->
+
+<button type="button" onclick="closePopup()"><a href="index.html" style="text-decoration:none;">OK</a></button>
+
+          </div>
+          </div>
+
+
+        </div>
+      </div>
+  </div>
+
+</div>
+</section>
+
+
+
+</div>
+<script>
+  let popup = document.getElementById("popup");
+
+  function openPopup(){
+    popup.classList.add("open-popup");
+     localStorage.removeItem("lsitemincart");
+     localStorage.setItem("lsitemincart",[]);
+     localStorage.setItem("cartnumber",0);
+     localStorage.setItem("totalprice",0);
+     // location.reload();
+     alert("Your Place Order is Successfull !!");
+  }
+  function closePopup(){
+    popup.classList.remove("open-popup");
+  }
+
+
+</script>
+<script type="text/javascript" src="cart.js"> </script>
+</body>
+</html>
